@@ -1,0 +1,683 @@
+{
+  "task_name": "image_classification",
+  "models": [
+    {
+      "model_name": "convnextpico",
+      "model_script_path": "/data/chl0045/project/benchmark_v2/models/convnextpico.py",
+      "runs": [
+        {
+          "dataset": "cifar10",
+          "model_id": "convnextpi_000",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.045935
+          },
+          "stage": "classification",
+          "base_model_name": "convnext_pico",
+          "base_model_path": null,
+          "config_path": "train/image_classification/convnextpico/config/cifar10.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.0005,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 4,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 224,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 4,
+            "best_val_acc": 96.99,
+            "best_val_loss": 0.104373,
+            "total_params": 8537802,
+            "total_params_in_m": "8.537802M",
+            "trainable_params": 8537802,
+            "trainable_params_in_m": "8.537802M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/cifar10/convnextpico/convnextpi_000.pth"
+        }
+      ]
+    },
+    {
+      "model_name": "mobilenetlarge",
+      "model_script_path": "/data/chl0045/project/benchmark_v2/models/mobilenetlarge.py",
+      "runs": [
+        {
+          "dataset": "cifar10",
+          "model_id": "mobilenetl_000",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.034388
+          },
+          "stage": "classification",
+          "base_model_name": "mobilenetv3_large_100",
+          "base_model_path": null,
+          "config_path": "train/image_classification/mobilenetlarge/config/cifar10.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.0005,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 5,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 224,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 4,
+            "best_val_acc": 95.53,
+            "best_val_loss": 0.181964,
+            "total_params": 4214842,
+            "total_params_in_m": "4.214842M",
+            "trainable_params": 4214842,
+            "trainable_params_in_m": "4.214842M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/cifar10/mobilenetlarge/mobilenetl_000.pth"
+        },
+        {
+          "dataset": "mnist",
+          "model_id": "mobilenetl_001",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.040502
+          },
+          "stage": "classification",
+          "base_model_name": "mobilenetv3_large_100",
+          "base_model_path": null,
+          "config_path": "train/image_classification/mobilenetlarge/config/mnist.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.0005,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 5,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 224,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 4,
+            "best_val_acc": 99.48,
+            "best_val_loss": 0.017188,
+            "total_params": 4214842,
+            "total_params_in_m": "4.214842M",
+            "trainable_params": 4214842,
+            "trainable_params_in_m": "4.214842M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/mnist/mobilenetlarge/mobilenetl_001.pth"
+        }
+      ]
+    },
+    {
+      "model_name": "image_cnn",
+      "model_script_path": "/data/chl0045/project/benchmark_v2/models/image_cnn.py",
+      "runs": [
+        {
+          "dataset": "mnist",
+          "model_id": "imagecnn_000",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.01513
+          },
+          "stage": "classification",
+          "base_model_name": null,
+          "base_model_path": null,
+          "config_path": "train/image_classification/image_cnn/config/mnist.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 20,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 32,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 16,
+            "best_val_acc": 99.33,
+            "best_val_loss": 0.025129,
+            "total_params": 153962,
+            "total_params_in_m": "0.153962M",
+            "trainable_params": 153962,
+            "trainable_params_in_m": "0.153962M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/mnist/image_cnn/imagecnn_000.pth"
+        },
+        {
+          "dataset": "cifar10",
+          "model_id": "imagecnn_001",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.009136
+          },
+          "stage": "classification",
+          "base_model_name": null,
+          "base_model_path": null,
+          "config_path": "train/image_classification/image_cnn/config/cifar10.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 20,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 32,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 16,
+            "best_val_acc": 69.14,
+            "best_val_loss": 0.917102,
+            "total_params": 153962,
+            "total_params_in_m": "0.153962M",
+            "trainable_params": 153962,
+            "trainable_params_in_m": "0.153962M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/cifar10/image_cnn/imagecnn_001.pth"
+        },
+        {
+          "dataset": "cifar10",
+          "model_id": "imagecnn_002",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.011604
+          },
+          "stage": "classification",
+          "base_model_name": null,
+          "base_model_path": null,
+          "config_path": "train/image_classification/image_cnn/config/cifar10.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 20,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 32,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 18,
+            "best_val_acc": 69.47,
+            "best_val_loss": 0.912958,
+            "total_params": 153962,
+            "total_params_in_m": "0.153962M",
+            "trainable_params": 153962,
+            "trainable_params_in_m": "0.153962M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/cifar10/image_cnn/imagecnn_002.pth"
+        },
+        {
+          "dataset": "svhn",
+          "model_id": "imagecnn_003",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.01523
+          },
+          "stage": "classification",
+          "base_model_name": null,
+          "base_model_path": null,
+          "config_path": "train/image_classification/image_cnn/config/svhn.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 20,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 32,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 14,
+            "best_val_acc": 89.27858,
+            "best_val_loss": 0.407848,
+            "total_params": 153962,
+            "total_params_in_m": "0.153962M",
+            "trainable_params": 153962,
+            "trainable_params_in_m": "0.153962M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/svhn/image_cnn/imagecnn_003.pth"
+        },
+        {
+          "dataset": "stl10",
+          "model_id": "imagecnn_004",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.006417
+          },
+          "stage": "classification",
+          "base_model_name": null,
+          "base_model_path": null,
+          "config_path": "train/image_classification/image_cnn/config/stl10.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 20,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 32,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 18,
+            "best_val_acc": 51.675,
+            "best_val_loss": 1.341974,
+            "total_params": 153962,
+            "total_params_in_m": "0.153962M",
+            "trainable_params": 153962,
+            "trainable_params_in_m": "0.153962M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/stl10/image_cnn/imagecnn_004.pth"
+        }
+      ]
+    },
+    {
+      "model_name": "vitmini_full",
+      "model_script_path": "/data/chl0045/project/benchmark_v2/models/vitmini.py",
+      "runs": [
+        {
+          "dataset": "mnist",
+          "model_id": "vitminiful_000",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.076045
+          },
+          "stage": "classification",
+          "base_model_name": "vit_tiny_patch16_224",
+          "base_model_path": "/data/chl0045/project/benchmark_v2/zoo/cifar100/vitmini/vitmini_002.pth",
+          "config_path": "train/image_classification/vitmini/config/mnist.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 10,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 224,
+            "input_channels": 3,
+            "finetune_mode": "full"
+          },
+          "training_info": {
+            "best_epoch": 9,
+            "best_val_acc": 98.58,
+            "best_val_loss": 0.050301,
+            "total_params": 918410,
+            "total_params_in_m": "0.918410M",
+            "trainable_params": 918410,
+            "trainable_params_in_m": "0.918410M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/mnist/vitmini_full/vitminiful_000.pth"
+        },
+        {
+          "dataset": "cifar10",
+          "model_id": "vitminiful_001",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.055205
+          },
+          "stage": "classification",
+          "base_model_name": "vit_tiny_patch16_224",
+          "base_model_path": "/data/chl0045/project/benchmark_v2/zoo/cifar100/vitmini/vitmini_002.pth",
+          "config_path": "train/image_classification/vitmini/config/cifar10.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 10,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 224,
+            "input_channels": 3,
+            "finetune_mode": "full"
+          },
+          "training_info": {
+            "best_epoch": 10,
+            "best_val_acc": 72.07,
+            "best_val_loss": 0.931169,
+            "total_params": 918410,
+            "total_params_in_m": "0.918410M",
+            "trainable_params": 918410,
+            "trainable_params_in_m": "0.918410M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/cifar10/vitmini_full/vitminiful_001.pth"
+        }
+      ]
+    },
+    {
+      "model_name": "vitmini_lora",
+      "model_script_path": "/data/chl0045/project/benchmark_v2/models/vitmini.py",
+      "runs": [
+        {
+          "dataset": "mnist",
+          "model_id": "vitminilor_000",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.076512
+          },
+          "stage": "classification",
+          "base_model_name": "vit_tiny_patch16_224",
+          "base_model_path": "/data/chl0045/project/benchmark_v2/zoo/cifar100/vitmini/vitmini_002.pth",
+          "config_path": "train/image_classification/vitmini/config/mnist.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 10,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 224,
+            "input_channels": 3,
+            "finetune_mode": "lora",
+            "lora_r": 8,
+            "lora_alpha": 16,
+            "lora_dropout": 0.0
+          },
+          "training_info": {
+            "best_epoch": 10,
+            "best_val_acc": 95.17,
+            "best_val_loss": 0.154653,
+            "total_params": 942986,
+            "total_params_in_m": "0.942986M",
+            "trainable_params": 25866,
+            "trainable_params_in_m": "0.025866M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/mnist/vitmini_lora/vitminilor_000.pth"
+        },
+        {
+          "dataset": "cifar10",
+          "model_id": "vitminilor_001",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.055041
+          },
+          "stage": "classification",
+          "base_model_name": "vit_tiny_patch16_224",
+          "base_model_path": "/data/chl0045/project/benchmark_v2/zoo/cifar100/vitmini/vitmini_002.pth",
+          "config_path": "train/image_classification/vitmini/config/cifar10.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 10,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 224,
+            "input_channels": 3,
+            "finetune_mode": "lora",
+            "lora_r": 8,
+            "lora_alpha": 16,
+            "lora_dropout": 0.0
+          },
+          "training_info": {
+            "best_epoch": 10,
+            "best_val_acc": 65.39,
+            "best_val_loss": 0.974446,
+            "total_params": 942986,
+            "total_params_in_m": "0.942986M",
+            "trainable_params": 25866,
+            "trainable_params_in_m": "0.025866M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/cifar10/vitmini_lora/vitminilor_001.pth"
+        },
+        {
+          "dataset": "mnist",
+          "model_id": "vitminilor_002",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.151413
+          },
+          "stage": "classification",
+          "base_model_name": "vit_tiny_patch16_224",
+          "base_model_path": "/data/chl0045/project/benchmark_v2/zoo/cifar100/vitmini/vitmini_002.pth",
+          "config_path": "train/image_classification/vitmini/config/mnist.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 20,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 224,
+            "input_channels": 3,
+            "finetune_mode": "lora",
+            "lora_r": 8,
+            "lora_alpha": 16,
+            "lora_dropout": 0.0
+          },
+          "training_info": {
+            "best_epoch": 20,
+            "best_val_acc": 96.73,
+            "best_val_loss": 0.1081,
+            "total_params": 942986,
+            "total_params_in_m": "0.942986M",
+            "trainable_params": 25866,
+            "trainable_params_in_m": "0.025866M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/mnist/vitmini_lora/vitminilor_002.pth"
+        },
+        {
+          "dataset": "cifar10",
+          "model_id": "vitminilor_003",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.110626
+          },
+          "stage": "classification",
+          "base_model_name": "vit_tiny_patch16_224",
+          "base_model_path": "/data/chl0045/project/benchmark_v2/zoo/cifar100/vitmini/vitmini_002.pth",
+          "config_path": "train/image_classification/vitmini/config/cifar10.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 20,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 224,
+            "input_channels": 3,
+            "finetune_mode": "lora",
+            "lora_r": 8,
+            "lora_alpha": 16,
+            "lora_dropout": 0.0
+          },
+          "training_info": {
+            "best_epoch": 17,
+            "best_val_acc": 66.83,
+            "best_val_loss": 0.942915,
+            "total_params": 942986,
+            "total_params_in_m": "0.942986M",
+            "trainable_params": 25866,
+            "trainable_params_in_m": "0.025866M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/cifar10/vitmini_lora/vitminilor_003.pth"
+        }
+      ]
+    },
+    {
+      "model_name": "resnetmini",
+      "model_script_path": "/data/chl0045/project/benchmark_v2/models/resnetmini.py",
+      "runs": [
+        {
+          "dataset": "mnist",
+          "model_id": "resnetmini_000",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.017248
+          },
+          "stage": "classification",
+          "base_model_name": null,
+          "base_model_path": null,
+          "config_path": "train/image_classification/resnetmini/config/mnist.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 20,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 32,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 18,
+            "best_val_acc": 99.53,
+            "best_val_loss": 0.016165,
+            "total_params": 927398,
+            "total_params_in_m": "0.927398M",
+            "trainable_params": 927398,
+            "trainable_params_in_m": "0.927398M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/mnist/resnetmini/resnetmini_000.pth"
+        },
+        {
+          "dataset": "cifar10",
+          "model_id": "resnetmini_001",
+          "hardware": {
+            "gpu": "NVIDIA H100 NVL",
+            "training_time_hrs": 0.010546
+          },
+          "stage": "classification",
+          "base_model_name": null,
+          "base_model_path": null,
+          "config_path": "train/image_classification/resnetmini/config/cifar10.json",
+          "augmentation_path": null,
+          "hyperparams": {
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "weight_decay": 0.0001,
+            "batch_size": 256,
+            "epochs": 20,
+            "seed": 42,
+            "scheduler": "cosine_annealing",
+            "image_size": 32,
+            "input_channels": 3
+          },
+          "training_info": {
+            "best_epoch": 18,
+            "best_val_acc": 79.32,
+            "best_val_loss": 0.924181,
+            "total_params": 927398,
+            "total_params_in_m": "0.927398M",
+            "trainable_params": 927398,
+            "trainable_params_in_m": "0.927398M",
+            "embedding_params": null,
+            "embedding_params_in_m": null,
+            "non_embedding_params": null,
+            "non_embedding_params_in_m": null,
+            "epoch_logs": []
+          },
+          "ckpt_path": "zoo/cifar10/resnetmini/resnetmini_001.pth"
+        }
+      ]
+    }
+  ]
+}
